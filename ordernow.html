@@ -1,0 +1,97 @@
+
+  <! DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+                    }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba (0, 0, 0, 0.1);
+                              }
+        input [type="text"], input[type="number"], input[type="date"],  
+input [type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div style="text-align:center;margin-top:40px;"><img src="scoopies.jpg"></div>
+
+<div style="text-align:center;margin-top:40px;">
+<a style="padding-right:20px;" href="home.html">HOME</a>
+<a style="padding-right:20px;" href="about.html">ABOUT</a>
+<a style="padding-right:20px;" href="services.html">SERVICES</a>
+</div>
+
+    <div class="container">
+        <h2>Make an order now for the mouth watering ice-creams from SCOOPIES</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br><br>
+            <label for="no">Give a valid Phone no. to track your order:</label>
+            <input type="number" id="no" required><br><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" required><br><br>
+            <label for="date">Schedule a Date on which you want the Delivery :</label>
+            <input type="date" id="date" required><br>
+            <label for="time">Select the time at which you want theDelivery:</label>
+            <input type="time" id="time" required><br><br>
+            <label for="flavour">Choose the Flavour:</label>
+            <select id="flavour" required><br><br>
+                <option value="CHOCOLATE">CHOCOLATE</option>
+                <option value="MANGO">MANGO</option>
+                <option value="STRAWBERRY">STRAWBERRY</option>
+	  <option value="ORANGE">ORANGE</option>
+	 <option value="BUTERSCOTCH">BUTERSCOTCH</option>
+	 <option value="BLUEBERRY">BLUEBERRY</option>
+         <br><br>
+            </select>
+            <button type="submit">ORDER</button>
+        </form>
+    </div>
+
+    <script>
+        const bookingForm = document.getElementById("bookingForm");
+        bookingForm.addEventListener("submit", function (e)
+       {
+          e.preventDefault();
+           
+            alert("Order booked successfully!");
+        });
+    </script>
+</body>
+</html>
+    
